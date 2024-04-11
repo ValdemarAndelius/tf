@@ -1,0 +1,10 @@
+h1 your build
+
+
+ol
+  - builds.each do |build|
+    li 
+      a href="builds/#{build['build_id']}" #{build["name"]}
+      a href="builds/#{build['build_id']}/edit" Uppdatera
+      form method="POST" action="builds/#{build['build_id']}/delete"
+        input type="submit" value="Delete"

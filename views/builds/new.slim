@@ -1,0 +1,11 @@
+p = @result
+
+form action="/build/new" method="post"
+    select name="part"
+        - @result.each do |part|
+            option value="#{part['part']}" #{part['part']}
+    select name="brand"
+        - @result.each do |brand|
+            option value="#{brand['brand']}" #{brand['brand']}
+
+    input type="submit" value="Påbörja ett projekt"

@@ -1,0 +1,4 @@
+form action='/builds/#{result['build_id']}/update' method="POST"
+    input type="text" name="name" value="#{result['name']}"
+    input type="hidden" name="build_id" value="#{result['build_id']}"
+    input type="submit" value="Edit it"
