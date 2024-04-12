@@ -25,6 +25,27 @@ post('/login') do
     redirect('/login')
 end
 
+
+#post('/start') do
+ #   user = params[”user”]
+  #  pwd = params[”pwd”]
+   # pwd_confirm = params[”pwd_confirm”]
+    #db = SQLite3::Database.new(”db/slutprojekt2024.db”)
+    #result=db.execute(”SELECT id FROM users WHERE user=?”,user)
+    #if result.empty?
+     #   if pwd==pwd_confirm
+      #  pwd_digest=BCrypt::Password.create(pwd)
+#       # db.execute(”INSERT INTO users(user, pwd_digest) VALUES(?,?)”,user,pwd_digest)
+ #       redirect(’/build)
+  #      else
+   #         redirect(’/error’) #Lösenord matchar ej
+    #    end
+   # else
+    #    redirect(’/start) #User existerar redan
+    #end
+#end
+
+
 get('/build') do
     db = SQLite3::Database.new("db/slutprojekt2024.db")
     db.results_as_hash = true
