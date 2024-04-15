@@ -1,9 +1,50 @@
 p = @result
 
+
+h2 Select frame
 form action="/build/new" method="post"
-    select name="part"
-        - @result.each do |part|
-            option value="#{part['part']}" #{part['part']}
+    select name="brand"
+        - @result.each do |brand|
+            option value="#{brand['brand']}" #{brand['brand']}
+    
+h2 Select wheels
+form action="/build/new" method="post"
+    select name="brand"
+        - @result.each do |brand|
+            option value="#{brand['brand']}" #{brand['brand']}
+
+h2 Select handelbars
+form action="/build/new" method="post"
+    select name="brand"
+        - @result.each do |brand|
+            option value="#{brand['brand']}" #{brand['brand']}
+
+h2 Select derailleur
+form action="/build/new" method="post"
+    select name="brand"
+        - @result.each do |brand|
+            option value="#{brand['brand']}" #{brand['brand']}
+
+h2 Select brakes
+form action="/build/new" method="post"
+    select name="brand"
+        - @result.each do |brand|
+            option value="#{brand['brand']}" #{brand['brand']}
+
+h2 Select crankset
+form action="/build/new" method="post"
+    select name="brand"
+        - @result.each do |brand|
+            option value="#{brand['brand']}" #{brand['brand']}
+
+h2 Select suspension
+form action="/build/new" method="post"
+    select name="brand"
+        - @result.each do |brand|
+            option value="#{brand['brand']}" #{brand['brand']}
+
+h2 Select seatpost
+form action="/build/new" method="post"
     select name="brand"
         - @result.each do |brand|
             option value="#{brand['brand']}" #{brand['brand']}
