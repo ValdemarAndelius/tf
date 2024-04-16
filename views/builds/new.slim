@@ -1,52 +1,51 @@
-p = @result
 
 
 h2 Select frame
 form action="/build/new" method="post"
-    select name="brand"
-        - @result.each do |brand|
+    select name="frame"
+        - @frame.each do |brand|
             option value="#{brand['brand']}" #{brand['brand']}
     
 h2 Select wheels
 form action="/build/new" method="post"
-    select name="brand"
-        - @result.each do |brand|
+    select name="wheels"
+        - @wheels.each do |brand|
             option value="#{brand['brand']}" #{brand['brand']}
 
 h2 Select handelbars
 form action="/build/new" method="post"
-    select name="brand"
-        - @result.each do |brand|
+    select name="handlebars"
+        - @handlebars.each do |brand|
             option value="#{brand['brand']}" #{brand['brand']}
 
 h2 Select derailleur
 form action="/build/new" method="post"
-    select name="brand"
-        - @result.each do |brand|
+    select name="derailleur"
+        - @derailleur.each do |brand|
             option value="#{brand['brand']}" #{brand['brand']}
 
 h2 Select brakes
 form action="/build/new" method="post"
-    select name="brand"
-        - @result.each do |brand|
+    select name="brakes"
+        - @brakes.each do |brand|
             option value="#{brand['brand']}" #{brand['brand']}
 
 h2 Select crankset
 form action="/build/new" method="post"
-    select name="brand"
-        - @result.each do |brand|
+    select name="crankset"
+        - @crankset.each do |brand|
             option value="#{brand['brand']}" #{brand['brand']}
 
 h2 Select suspension
 form action="/build/new" method="post"
-    select name="brand"
-        - @result.each do |brand|
+    select name="suspension"
+        - @suspension.each do |brand|
             option value="#{brand['brand']}" #{brand['brand']}
 
 h2 Select seatpost
 form action="/build/new" method="post"
-    select name="brand"
-        - @result.each do |brand|
+    select name="seatpost"
+        - @seatpost.each do |brand|
             option value="#{brand['brand']}" #{brand['brand']}
 
     input type="submit" value="Påbörja ett projekt"

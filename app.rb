@@ -20,13 +20,19 @@ end
 get('/build/new') do
     db = SQLite3::Database.new("db/slutprojekt2024.db")
     db.results_as_hash = true
-    @result = db.execute("SELECT * FROM part")
-    p @result
+    @frame = db.execute("SELECT * FROM part WHERE type_id = 2")
+    @wheels = db.execute("SELECT * FROM part WHERE type_id = 1")
+    @handlebars = db.execute("SELECT * FROM part WHERE type_id = 3")
+    @suspension = db.execute("SELECT * FROM part WHERE type_id = 4")
+    @derailleur = db.execute("SELECT * FROM part WHERE type_id = 5")
+    @crankset = db.execute("SELECT * FROM part WHERE type_id = 6")
+    @brakes = db.execute("SELECT * FROM part WHERE type_id = 7")
+    @seatpost = db.execute("SELECT * FROM part WHERE type_id = 8")
     slim(:"builds/new")
 end
 
 post('/build/new') do
-    brand = params[:part]
+    brand = params[:brand]
     part_id = params[:part_id].to_i
     p "Vi fick in datan #{brand} #{part_id}"
     db = SQLite3::Database.new("db/slutprojekt2024.db")
@@ -43,7 +49,7 @@ end
 
 post('/build/:id/update') do
     id = params[:id].to_i
-    title = params[:brand]
+    brand = params[:brand]
     part_id = params[:part_id].to_i
     db = SQLite3::Database.new("db/slutprojekt2024.db")
     db.execute("UPDATE build SET name=?,build_id=? WHERE build_id = ?", brand,part_id,id) 
